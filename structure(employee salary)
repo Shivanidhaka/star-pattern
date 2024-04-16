@@ -1,0 +1,36 @@
+#include <stdio.h>
+struct employ{
+    int salary;
+    int age;
+    char name[20];
+};
+void employ_salary(struct employ e[])
+{
+    int sum=0;
+    for(int i=0;i<10;i++){
+      sum=sum+e[i].salary;  
+    }
+    printf("total salary=%d",sum);
+    
+    
+}
+
+int main()
+{ 
+    struct employ e[10];
+    int i;
+    printf("enter the name of the employ:");
+    for(i=0;i<10;i++){
+        scanf("%s",e[i].name);
+    }
+    printf("enter the age of a employ:");
+    for(i=0;i<10;i++){
+        scanf("%d",&e[i].age);
+    }
+    printf("enter the salary of a employ:");
+    for(i=0;i<10;i++){
+        scanf("%d",&e[i].salary);
+    }
+    employ_salary(e);
+    
+}

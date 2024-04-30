@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include<stdlib.h>
+typedef struct nodetype{
+    int info;
+    struct nodetype *next;
+    
+} node;
+void insertion_from_begning(node **head)
+{
+    node*ptr;
+     int a=1;
+    while(a)
+    {
+        ptr=(node*)malloc(sizeof(node));
+        printf("enter the info part of a node");
+        scanf("%d",&ptr->info);
+        if(*head==NULL)
+        {
+            *head=ptr;
+            ptr->next=NULL;
+        }
+        else
+        {   
+            ptr->next=*head;
+            *head=ptr;
+        }
+    
+        printf("if you want to continue enter 1 and if dont want to continue enter 0");
+        scanf("%d",&a);
+    
+}
+void insertion_from_end(node **head)
+{
+ int   
+}
+void traversal(node *head)
+{
+    while(head!=NULL)
+    {
+    printf("%d",head->info);
+    head=head->next;
+    }
+}
+
+void main()
+{
+    node*head=NULL;
+    node*ptr;
+    int choice;
+    printf("enter the choice");
+    scanf("%d",&choice);
+    switch(choice){
+        case 1:
+        {
+        insertion_from_begning(&head);
+        traversal(head);
+        break;
+        }
+        case 2:
+        {
+            insertion_from_end(&head);
+            traversal(head);
+            break;
+        }
+        case 3:
+        {
+            traversal(head);
+            break;
+        }
+    }
+   
+}

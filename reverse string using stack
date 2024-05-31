@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include<stdlib.h>
+int top=-1;
+void push( char arr[] ,int max_size,int item){ 
+     if(top==max_size-1){
+        printf("stack is overflow");
+    }
+    else
+    {    
+        top++;#
+        arr[top]=item;
+        
+    }
+    
+}
+char pop(char arr[]){
+    char element;
+    if(top==-1){
+        printf("stack is underflow");
+    }
+    else{
+        element=arr[top];
+        top=top-1;
+    }
+    return element;
+}
+
+void main(){
+char arr[5];
+char stack[5];
+int i,max_size=5;
+printf("enter the string ");
+for(i=0;i<max_size;i++){
+    scanf("%c",&arr[i]);
+}
+for(i=0;i<max_size;i++)
+push(stack,max_size,arr[i]);
+for(i=0;i<max_size;i++){
+    int element=pop(stack);
+    printf("%c",element);
+}
+
+
+
+    
+}
